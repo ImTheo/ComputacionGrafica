@@ -31,12 +31,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtWidth = new System.Windows.Forms.TextBox();
+            this.txtHeight = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtArea = new System.Windows.Forms.TextBox();
+            this.txtPerimeter = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -53,8 +53,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtHeight);
+            this.groupBox1.Controls.Add(this.txtWidth);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -62,7 +62,7 @@
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Entrada";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
@@ -84,19 +84,19 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Largo (b)";
             // 
-            // textBox1
+            // txtWidth
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtWidth.Location = new System.Drawing.Point(84, 26);
+            this.txtWidth.Name = "txtWidth";
+            this.txtWidth.Size = new System.Drawing.Size(100, 20);
+            this.txtWidth.TabIndex = 3;
             // 
-            // textBox2
+            // txtHeight
             // 
-            this.textBox2.Location = new System.Drawing.Point(84, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtHeight.Location = new System.Drawing.Point(84, 57);
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(100, 20);
+            this.txtHeight.TabIndex = 4;
             // 
             // groupBox2
             // 
@@ -112,8 +112,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.txtArea);
+            this.groupBox3.Controls.Add(this.txtPerimeter);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(12, 261);
@@ -123,19 +123,19 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Salidas";
             // 
-            // textBox5
+            // txtArea
             // 
-            this.textBox5.Location = new System.Drawing.Point(84, 57);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 4;
+            this.txtArea.Location = new System.Drawing.Point(84, 57);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(100, 20);
+            this.txtArea.TabIndex = 4;
             // 
-            // textBox6
+            // txtPerimeter
             // 
-            this.textBox6.Location = new System.Drawing.Point(84, 26);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 3;
+            this.txtPerimeter.Location = new System.Drawing.Point(84, 26);
+            this.txtPerimeter.Name = "txtPerimeter";
+            this.txtPerimeter.Size = new System.Drawing.Size(100, 20);
+            this.txtPerimeter.TabIndex = 3;
             // 
             // label5
             // 
@@ -190,7 +190,7 @@
             this.groupBox4.Size = new System.Drawing.Size(481, 349);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Text = "Grafico";
             // 
             // picCamvas
             // 
@@ -205,6 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -227,8 +228,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtHeight;
+        private System.Windows.Forms.TextBox txtWidth;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -236,8 +237,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtArea;
+        private System.Windows.Forms.TextBox txtPerimeter;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox4;

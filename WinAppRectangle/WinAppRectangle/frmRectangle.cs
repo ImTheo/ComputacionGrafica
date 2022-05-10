@@ -8,18 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WinAppRectangle
 {
     public partial class frmRectangle : Form
     {
+        private CRectangle ObjRectangle = new CRectangle();
+
+
         public frmRectangle()
         {
             InitializeComponent();
         }
 
+
+
         private void frmRectangle_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("hola mundo");
+            // Inicialización de los datos y controles.
+            // Llamada a la función InitializeData.
+            ObjRectangle.InitializeData(txtWidth, txtHeight,
+            txtPerimeter, txtArea,
+            picCanvas);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
