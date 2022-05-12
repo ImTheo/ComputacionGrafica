@@ -10,8 +10,8 @@ namespace WinAppRectangle
 {
     internal class CRectangle
     {
-
         // Datos Miembro (Atributos).
+        #region "Datos miembro"
         // Ancho del rectángulo.
         private float mWidth;
         // Largo del rectángulo.
@@ -26,7 +26,7 @@ namespace WinAppRectangle
         private const float SF = 20;
         // Objeto bolígrafo que dibuja o escribe en un lienzo (canvas).
         private Pen mPen;
-
+        #endregion
         // Funciones Miembro (Métodos). 
 
         // Constructor sin parámetros.
