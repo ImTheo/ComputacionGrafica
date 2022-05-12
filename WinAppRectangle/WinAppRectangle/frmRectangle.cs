@@ -32,14 +32,40 @@ namespace WinAppRectangle
             picCanvas);
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnCalcular_Click(object sender, EventArgs e)
         {
-
+            // Lectura de datos.
+            // Llamada a la función ReadData.
+            ObjRectangle.ReadData(txtWidth, txtHeight);
+            // Cálculo del perímetro de un rectángulo.
+            // Llamada a la función PerimeterRectangle.
+            ObjRectangle.PerimeterRectangle();
+            // Cálculo del área de un rectángulo.
+            // Llamada a la función AreaRectangle.
+            ObjRectangle.AreaRectangle();
+            // Impresión de datos.
+            // Llamada a la función PrintData.
+            ObjRectangle.PrintData(txtPerimeter, txtArea);
+            // Graficación de un rectángulo.
+            // Llamada a la función PlotShape.
+            ObjRectangle.PlotShape(picCanvas);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnResetear_Click(object sender, EventArgs e)
         {
+            // Inicialización de los datos y controles.
+            // Llamada a la función InitializeData.
+            ObjRectangle.InitializeData(txtWidth, txtHeight,
+            txtPerimeter, txtArea,
+           picCanvas);
+        }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            // Cierre de un formulario.
+            // Llamada a la función CloseForm.
+            ObjRectangle.CloseForm(this);
+            
         }
     }
 }
