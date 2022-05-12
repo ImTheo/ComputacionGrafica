@@ -44,11 +44,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.picCanvas = new System.Windows.Forms.PictureBox();
+            this.trackBarAncho = new System.Windows.Forms.TrackBar();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.trackBarLargo = new System.Windows.Forms.TrackBar();
+            this.label7 = new System.Windows.Forms.Label();
+            this.trackBarXCoord = new System.Windows.Forms.TrackBar();
+            this.label8 = new System.Windows.Forms.Label();
+            this.trackBarYCoord = new System.Windows.Forms.TrackBar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAncho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarLargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarXCoord)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarYCoord)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -202,17 +214,103 @@
             this.picCanvas.TabIndex = 0;
             this.picCanvas.TabStop = false;
             // 
-            // frmRectangle
+            // trackBarAncho
+            // 
+            this.trackBarAncho.Location = new System.Drawing.Point(12, 393);
+            this.trackBarAncho.Maximum = 50;
+            this.trackBarAncho.Minimum = 1;
+            this.trackBarAncho.Name = "trackBarAncho";
+            this.trackBarAncho.Size = new System.Drawing.Size(104, 45);
+            this.trackBarAncho.TabIndex = 8;
+            this.trackBarAncho.Value = 1;
+            this.trackBarAncho.Scroll += new System.EventHandler(this.trackBarAncho_Scroll);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 377);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Ancho (a)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(148, 377);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Largo (a)";
+            // 
+            // trackBarLargo
+            // 
+            this.trackBarLargo.Location = new System.Drawing.Point(142, 393);
+            this.trackBarLargo.Maximum = 50;
+            this.trackBarLargo.Minimum = 1;
+            this.trackBarLargo.Name = "trackBarLargo";
+            this.trackBarLargo.Size = new System.Drawing.Size(104, 45);
+            this.trackBarLargo.TabIndex = 10;
+            this.trackBarLargo.Value = 1;
+            this.trackBarLargo.Scroll += new System.EventHandler(this.trackBarLargo_Scroll);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(332, 361);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Coordenada X";
+            // 
+            // trackBarXCoord
+            // 
+            this.trackBarXCoord.Location = new System.Drawing.Point(326, 377);
+            this.trackBarXCoord.Maximum = 500;
+            this.trackBarXCoord.Minimum = -500;
+            this.trackBarXCoord.Name = "trackBarXCoord";
+            this.trackBarXCoord.Size = new System.Drawing.Size(104, 45);
+            this.trackBarXCoord.TabIndex = 12;
+            this.trackBarXCoord.Scroll += new System.EventHandler(this.trackBarXCoord_Scroll);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(442, 361);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Coordenada Y";
+            // 
+            // trackBarYCoord
+            // 
+            this.trackBarYCoord.Location = new System.Drawing.Point(436, 377);
+            this.trackBarYCoord.Maximum = 500;
+            this.trackBarYCoord.Minimum = -500;
+            this.trackBarYCoord.Name = "trackBarYCoord";
+            this.trackBarYCoord.Size = new System.Drawing.Size(104, 45);
+            this.trackBarYCoord.TabIndex = 14;
+            this.trackBarYCoord.Scroll += new System.EventHandler(this.trackBarYCoord_Scroll);
+            // 
+            // FrmRectangle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.trackBarYCoord);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.trackBarXCoord);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.trackBarLargo);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.trackBarAncho);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmRectangle";
+            this.Name = "FrmRectangle";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmRectangle_Load);
             this.groupBox1.ResumeLayout(false);
@@ -222,7 +320,12 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAncho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarLargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarXCoord)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarYCoord)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -244,6 +347,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox picCanvas;
+        private System.Windows.Forms.TrackBar trackBarAncho;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TrackBar trackBarLargo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TrackBar trackBarXCoord;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TrackBar trackBarYCoord;
     }
 }
 

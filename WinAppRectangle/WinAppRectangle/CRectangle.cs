@@ -26,6 +26,10 @@ namespace WinAppRectangle
         private const float SF = 20;
         // Objeto bolígrafo que dibuja o escribe en un lienzo (canvas).
         private Pen mPen;
+        // Coord X
+        private int coordX=0;
+        // Coord Y
+        private int coordY=0;
         #endregion
         // Funciones Miembro (Métodos). 
 
@@ -50,6 +54,25 @@ namespace WinAppRectangle
                 "Mensaje de error");
             }
         }
+
+        // Función que lee los datos de entrada del rectángulo.
+        public void ReadDataTrackBar(String txtWidth, String txtHeight)
+        {
+
+            try
+            {
+                // Castear (Casting) de string a float
+                mWidth = float.Parse(txtWidth);
+                mHeight = float.Parse(txtHeight);
+            }
+            catch
+            {
+                MessageBox.Show(txtWidth+" "+txtHeight);
+                MessageBox.Show("Ingreso no válido...",
+                "Mensaje de error");
+            }
+        }
+
         // Función que calcula el perímetro del rectángulo.
         public void PerimeterRectangle()
         {
@@ -72,7 +95,9 @@ namespace WinAppRectangle
             TextBox txtHeight,
             TextBox txtPerimeter,
             TextBox txtArea,
-            PictureBox picCanvas)
+            PictureBox picCanvas,
+            int coordX,
+            int coordY)
 
         {
             mWidth = 0.0f; mHeight = 0.0f;
@@ -89,12 +114,18 @@ namespace WinAppRectangle
             mGraph = picCanvas.CreateGraphics();
             mPen = new Pen(Color.Blue, 3);
             // Graficar un rectángulo.
-            mGraph.DrawRectangle(mPen, 0, 0, mWidth * SF, mHeight * SF);
+            mGraph.DrawRectangle(mPen, coordX, coordY, mWidth * SF, mHeight * SF);
         }
         // Función que cierra un formulario.
         public void CloseForm(Form ObjForm)
         {
             ObjForm.Close();
+        }
+
+        public void setCoords(int coordX,int coordY)
+        {
+            this.coordX = coordX;
+            this.coordY = coordY;
         }
     }
 }
