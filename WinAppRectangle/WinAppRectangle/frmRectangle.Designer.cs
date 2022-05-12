@@ -1,6 +1,6 @@
 ﻿namespace WinAppRectangle
 {
-    partial class frmRectangle
+    partial class FrmRectangle
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -116,7 +116,7 @@
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // btnResetear
             // 
@@ -126,7 +126,7 @@
             this.btnResetear.TabIndex = 1;
             this.btnResetear.Text = "Resetear";
             this.btnResetear.UseVisualStyleBackColor = true;
-            this.btnResetear.Click += new System.EventHandler(this.btnResetear_Click);
+            this.btnResetear.Click += new System.EventHandler(this.BtnResetear_Click);
             // 
             // bntCalcular
             // 
@@ -136,7 +136,7 @@
             this.bntCalcular.TabIndex = 0;
             this.bntCalcular.Text = "Calcular";
             this.bntCalcular.UseVisualStyleBackColor = true;
-            this.bntCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            this.bntCalcular.Click += new System.EventHandler(this.BtnCalcular_Click);
             // 
             // groupBox3
             // 
@@ -214,7 +214,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmRectangle";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmRectangle_Load);
+            this.Load += new System.EventHandler(this.FrmRectangle_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -16,7 +16,7 @@ namespace WinAppRectangle
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRectangle());
+            Application.Run(new FrmRectangle());
             
             
         }
