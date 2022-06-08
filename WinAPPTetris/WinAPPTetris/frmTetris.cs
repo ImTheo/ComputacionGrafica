@@ -12,7 +12,7 @@ namespace WinAPPTetris
 {
     public partial class frmTetris : Form
     {
-        CTetris tetris = new CTetris();
+        TetrisApp tetris = new TetrisApp();
         public frmTetris()
         {
             InitializeComponent();
@@ -20,8 +20,8 @@ namespace WinAPPTetris
 
         private void picCanvas_Click(object sender, EventArgs e)
         {
-            tetris.GraphExit(picClose);
-            tetris.GraphMainArea(picCanvas);
+            tetris.Exit(picClose);
+            tetris.GraficarAreaDeJuego(picCanvas);
             tetris.GraphNextArea(picCanvas);
             tetris.InititializeData();
         }
@@ -38,7 +38,7 @@ namespace WinAPPTetris
 
         private void picPause_MouseEnter(object sender, EventArgs e)
         {
-            tetris.GraphPause(picPause);
+            tetris.Pausa(picPause);
         }
 
         private void picPause_MouseLeave(object sender, EventArgs e)

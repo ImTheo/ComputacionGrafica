@@ -73,12 +73,15 @@ namespace WinAPPTetris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(492, 450);
             this.Controls.Add(this.picPause);
             this.Controls.Add(this.picClose);
             this.Controls.Add(this.picCanvas);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Name = "frmTetris";
-            this.Text = "Tetris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TETRIS APP";
             this.Load += new System.EventHandler(this.frmTetris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
